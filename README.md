@@ -38,7 +38,10 @@ python3 -m pytest tests/ -q
        isolated copy on 2026-10-26)
 3. [x] Trajectory evaluation harness (v1): deterministic PASS/FAIL
        scoring of replayed trajectories with evidence records
-4. [ ] WebSocket streaming server replaying recorded frames at fixed Hz
+4. [x] WebSocket streaming server replaying recorded frames at fixed Hz
+       (stdlib-only RFC 6455 server in `src/stream.py`, binary frames a
+       Three.js front end can consume; 16 tests passing, verified in an
+       isolated copy on 2026-10-27)
 5. [ ] Three.js digital-twin viewer (InstancedMesh joint rendering, 60 FPS)
 6. [ ] World-model / policy evaluation: extend the harness to learned
        policies / predicted trajectories
