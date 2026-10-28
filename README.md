@@ -42,8 +42,17 @@ python3 -m pytest tests/ -q
        (stdlib-only RFC 6455 server in `src/stream.py`, binary frames a
        Three.js front end can consume; 16 tests passing, verified in an
        isolated copy on 2026-10-27)
-5. [ ] Three.js digital-twin viewer (InstancedMesh joint rendering, 60 FPS)
-6. [ ] World-model / policy evaluation: extend the harness to learned
+5. [x] NVIDIA open-model trajectory assessment via Nebius Token Factory
+       (`src/model_assist.py`, OpenAI-compatible client, stdlib-only):
+       the deterministic harness verdict is narrated — never overturned —
+       by `nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B` served on Token Factory.
+       Real call evidence (2026-10-28, HTTP 200) in
+       `NEBIUS_RUNTIME_CALL.md`; hermetic stub-server tests in
+       `tests/test_model_assist.py`. This satisfies the Nebius x NVIDIA
+       hackathon's "must run on Token Factory + use an NVIDIA open model"
+       requirement for the Physical AI track submission.
+6. [ ] Three.js digital-twin viewer (InstancedMesh joint rendering, 60 FPS)
+7. [ ] World-model / policy evaluation: extend the harness to learned
        policies / predicted trajectories
 
 ## Honesty note
