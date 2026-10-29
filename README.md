@@ -51,7 +51,11 @@ python3 -m pytest tests/ -q
        `tests/test_model_assist.py`. This satisfies the Nebius x NVIDIA
        hackathon's "must run on Token Factory + use an NVIDIA open model"
        requirement for the Physical AI track submission.
-6. [ ] Three.js digital-twin viewer (InstancedMesh joint rendering, 60 FPS)
+6. [~] Three.js digital-twin viewer (v0, 2026-10-29): `tools/export_timeseries.py`
+       exports a recorded stream (or a labelled synthetic demo) to JSON;
+       `viewer/` renders a 2-link planar arm from the joint angles with
+       play/pause + scrub (Three.js via CDN; serve the repo root to run).
+       InstancedMesh multi-joint rendering + 60 FPS tuning still pending.
 7. [ ] World-model / policy evaluation: extend the harness to learned
        policies / predicted trajectories
 

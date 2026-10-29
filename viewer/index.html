@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>TwinTeleop — Digital-Twin Viewer v0</title>
+<style>
+  body { margin: 0; background: #0d1117; color: #e6edf3; font-family: sans-serif; }
+  #hud { padding: 12px 16px; }
+  #hud button, #hud input[type=range] { vertical-align: middle; }
+  #hud input[type=range] { width: 420px; }
+  #readout { font-family: monospace; margin-top: 6px; color: #8b949e; }
+  canvas { display: block; }
+  .note { color: #8b949e; font-size: 13px; }
+</style>
+<script type="importmap">
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
+</script>
+</head>
+<body>
+<div id="hud">
+  <strong>TwinTeleop digital-twin viewer v0</strong>
+  <span class="note">— 2-link planar arm driven by joint angles from a time series.
+  Serve the repo root (<code>python3 -m http.server</code>) and open this page.</span><br>
+  <button id="play">Pause</button>
+  <input id="scrub" type="range" min="0" max="100" value="0">
+  <span id="readout"></span>
+</div>
+<script type="module" src="./viewer.js"></script>
+</body>
+</html>
